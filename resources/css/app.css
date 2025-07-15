@@ -5,4 +5,57 @@
 @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
 @source "../../storage/framework/views/*.php";
 
-@plugin "daisyui";
+@plugin "daisyui" {
+  exclude: alert;
+}
+
+/* Estilos mejorados para alert (reemplazo del componente problemático) */
+.alert {
+  @apply flex items-center gap-3 p-4 rounded-lg border text-sm min-h-12;
+}
+
+/* Colores principales */
+.alert-info {
+  @apply bg-info/15 border-info/30 text-info-content;
+}
+
+.alert-success {
+  @apply bg-success/15 border-success/30 text-success-content;
+}
+
+.alert-warning {
+  @apply bg-warning/15 border-warning/30 text-warning-content;
+}
+
+.alert-error {
+  @apply bg-error/15 border-error/30 text-error-content;
+}
+
+/* Variantes de estilo */
+.alert-soft {
+  @apply border-transparent;
+}
+
+.alert-outline {
+  @apply bg-transparent border-2;
+}
+
+.alert-dash {
+  @apply border-dashed;
+}
+
+/* Layout responsive */
+.alert-vertical {
+  @apply flex-col items-start;
+}
+
+.alert-horizontal {
+  @apply flex-row items-center;
+}
+
+/* Por defecto los alerts son horizontales */
+@media (min-width: 640px) {
+  .alert-vertical.sm\:alert-horizontal {
+    @apply flex-row items-center;
+  }
+}
