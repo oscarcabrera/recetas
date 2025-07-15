@@ -22,7 +22,7 @@
         <header class="navbar bg-base-100 border-b border-base-200">
             <div class="navbar-start">
                 <div class="flex-1">
-                    <a class="btn btn-ghost text-xl">{{ config('app.name', 'Laravel') }}</a>
+                    <a class="btn btn-ghost text-xl">{{ config('app.name', 'SICODI') }}</a>
                 </div>
             </div>
             
